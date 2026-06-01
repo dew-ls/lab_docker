@@ -153,4 +153,4 @@ docker compose up --build
 10.0.2.2 - - [01/Jun/2026 09:34:20] "GET / HTTP/1.1" 200 -
 ```
 
-##![База данных в браузере](~/Obshi/screenshot.png)
+##![База данных в браузере](screenshot.png)
