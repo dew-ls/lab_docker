@@ -7,14 +7,14 @@ class ItemModel:
             'host': os.getenv('DB_HOST', os.getenv('DB_HOST')),
             'user': os.getenv('DB_USER', os.getenv('DB_USER')),
             'password': os.getenv('DB_PASS', os.getenv('DB_PASS')),
-            'database': os.getenv('DB_NAME', os.getenv('DB_NAME'))
+            'database': os.getenv('DB_NAME', os.getenv('DB_NAME')),
         }
 
     def get_all_items(self):
         try:
             conn = mysql.connector.connect(**self.config)
             cursor = conn.cursor(dictionary=True)
-            cursor.execute('SELECT name FROM items')
+            cursor.execute('SELECT * FROM items')
             items = cursor.fetchall()
             cursor.close()
             conn.close()
